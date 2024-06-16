@@ -1,4 +1,4 @@
-// declare a function that returns either "rock", "paper" or "scissors"
+// create a function that returns either "rock", "paper" or "scissors"
 
 // IF number === 0
 //    return "rock"
@@ -15,9 +15,22 @@ function getComputerChoice() {
   } else if (randomNumber === 1) {
     return "paper";
   } else if (randomNumber === 2) {
-    return "paper";
+    return "scissors";
   }
 }
 
-getComputerChoice()
+getComputerChoice();
+
+// create a function getHumanChoice
+
+// IF humanChoice === "rock"
+//    return "rock"
+
+function getHumanChoice() {
+  let humanChoice = prompt("Choose between rock, paper or scissors: ");
+
+  return console.log(humanChoice);
+}
+
+getHumanChoice();
 
