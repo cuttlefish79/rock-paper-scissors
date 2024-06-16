@@ -19,18 +19,35 @@ function getComputerChoice() {
   }
 }
 
-getComputerChoice();
-
 // create a function getHumanChoice
 
-// IF humanChoice === "rock"
+// IF userChoice === "rock"
 //    return "rock"
 
 function getHumanChoice() {
-  let humanChoice = prompt("Choose between rock, paper or scissors: ");
-
-  return console.log(humanChoice);
+  let userChoice = prompt("Choose between rock, paper or scissors: ");
+  return userChoice;
 }
 
-getHumanChoice();
+// declare human/computer score variables
 
+let humanScore = 0;
+let computerScore = 0;
+
+// IF getComputersChoice() is "paper" but getHumanChoice() is "rock"
+// ADD 1 to computerScore
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === "rock" && computerChoice === "scissors") {
+    ++computerScore;
+    return console.log(`You lose! Scissors beat Rock - 0:${computerScore}`);
+  } else if (humanChoice === "rock" && computerChoice === "paper") {
+    ++computerScore;
+    return console.log(`You lose! Paper beats Rock - 0:${computerScore}`);
+  }
+}
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
+playRound(humanChoice, computerChoice);
